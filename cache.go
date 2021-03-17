@@ -11,6 +11,7 @@ type Cache interface {
 	Name() string
 	Set(string)
 	Get(string) bool
+	Close()
 }
 
 func stringFromInt64(n int64) string {

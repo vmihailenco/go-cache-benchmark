@@ -33,3 +33,7 @@ func (c *Ristretto) Get(key string) bool {
 	_, ok := c.v.Get(key)
 	return ok
 }
+
+func (c *Ristretto) Close() {
+	c.v.Close()
+}

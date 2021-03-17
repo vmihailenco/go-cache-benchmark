@@ -57,6 +57,7 @@ func run(newGen NewGeneratorFunc, cacheSize, samples int, newCache NewCacheFunc)
 
 	alloc1 := memAlloc()
 	cache := newCache(cacheSize)
+	defer cache.Close()
 
 	start := time.Now()
 	hits, misses := bench(b, cache)

@@ -28,3 +28,5 @@ func (c *TwoQueue) Get(key string) bool {
 	_, ok := c.v.Get(key)
 	return ok
 }
+
+func (c *TwoQueue) Close() {}

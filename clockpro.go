@@ -33,3 +33,5 @@ func (c *ClockPro) Get(key string) bool {
 	c.mu.Unlock()
 	return v != nil
 }
+
+func (c *ClockPro) Close() {}

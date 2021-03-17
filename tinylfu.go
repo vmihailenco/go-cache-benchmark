@@ -33,3 +33,5 @@ func (c *TinyLFU) Get(key string) bool {
 	c.mu.Unlock()
 	return ok
 }
+
+func (c *TinyLFU) Close() {}

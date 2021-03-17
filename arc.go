@@ -28,3 +28,5 @@ func (c *ARC) Get(key string) bool {
 	_, ok := c.v.Get(key)
 	return ok
 }
+
+func (c *ARC) Close() {}
