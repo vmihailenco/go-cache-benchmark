@@ -19,6 +19,13 @@ The following libraries are supported:
 
 And the results are:
 
+<details>
+  <summary>TLDR</summary>
+
+- TinyLFU works best for small number of keys (~ 100k).
+- ClockPro has significantly smaller memory usage with large number of keys (~ 1m).
+</details>
+
 ```
 zipfian cache=1000 keys=2000
 
