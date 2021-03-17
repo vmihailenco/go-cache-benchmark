@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Cache benchmark for Go
+# Cache comparison benchmark for Go
 
 This benchmark compares cache algorithms using scrambled zipfian distribution (a few occur very
 often while many others occur rarely). Other distributions are supported too, but they produce the
@@ -23,7 +23,7 @@ And the results are:
   <summary>TLDR</summary>
 
 - TinyLFU works best for small number of keys (~ 100k).
-- ClockPro has significantly smaller memory usage with large number of keys (~ 1m).
+- Clock-pro has significantly smaller memory usage with large number of keys (~ 1m).
 </details>
 
 ```
