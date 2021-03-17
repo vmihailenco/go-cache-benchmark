@@ -11,8 +11,8 @@ type Benchmark struct {
 }
 
 func main() {
-	cacheSize := []int{1e3, 10e3, 100e3}
-	multiplier := []int{10, 100}
+	cacheSize := []int{1e3, 10e3, 100e3, 1e6}
+	multiplier := []int{2, 10, 100}
 	newCache := []NewCacheFunc{
 		NewTinyLFU,
 		NewClockPro,
