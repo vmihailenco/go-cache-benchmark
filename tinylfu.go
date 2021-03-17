@@ -1,9 +1,14 @@
 package main
 
-import "github.com/dgryski/go-tinylfu"
+import (
+	"sync"
+
+	"github.com/dgryski/go-tinylfu"
+)
 
 type TinyLFU struct {
-	v *tinylfu.T
+	mu sync.Mutex
+	v  *tinylfu.T
 }
 
 func NewTinyLFU(size int) Cache {
@@ -17,10 +22,14 @@ func (c *TinyLFU) Name() string {
 }
 
 func (c *TinyLFU) Set(key string) {
+	c.mu.Lock()
 	c.v.Add(key, key)
+	c.mu.Unlock()
 }
 
 func (c *TinyLFU) Get(key string) bool {
+	c.mu.Lock()
 	_, ok := c.v.Get(key)
+	c.mu.Unlock()
 	return ok
 }
