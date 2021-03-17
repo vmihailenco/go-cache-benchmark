@@ -20,7 +20,7 @@ The following libraries are supported:
 And the results are:
 
 ```
-zipfian size=1000 samples=10000
+zipfian cache=1000 keys=10000
 
     CACHE   | HIT RATE |  TIME  | MEMORY  |  HITS  | MISSES
 ------------+----------+--------+---------+--------+---------
@@ -32,7 +32,7 @@ zipfian size=1000 samples=10000
   lru       |     0.28 |  838ms | 0.20MiB | 280385 | 719615
 
 
-zipfian size=1000 samples=100000
+zipfian cache=1000 keys=100000
 
     CACHE   | HIT RATE |  TIME  | MEMORY  |  HITS  | MISSES
 ------------+----------+--------+---------+--------+---------
@@ -44,7 +44,7 @@ zipfian size=1000 samples=100000
   lru       |     0.21 |  860ms | 0.22MiB | 207349 | 792651
 
 
-zipfian size=10000 samples=100000
+zipfian cache=10000 keys=100000
 
     CACHE   | HIT RATE |  TIME  | MEMORY  |  HITS  | MISSES
 ------------+----------+--------+---------+--------+---------
@@ -56,7 +56,7 @@ zipfian size=10000 samples=100000
   lru       |     0.37 |  972ms | 1.98MiB | 365356 | 634644
 
 
-zipfian size=10000 samples=1000000
+zipfian cache=10000 keys=1000000
 
     CACHE   | HIT RATE |  TIME  | MEMORY  |  HITS  | MISSES
 ------------+----------+--------+---------+--------+---------
@@ -68,7 +68,7 @@ zipfian size=10000 samples=1000000
   lru       |     0.30 | 1028ms | 1.98MiB | 303715 | 696285
 
 
-zipfian size=100000 samples=1000000
+zipfian cache=100000 keys=1000000
 
     CACHE   | HIT RATE |  TIME  |  MEMORY  |  HITS  | MISSES
 ------------+----------+--------+----------+--------+---------
