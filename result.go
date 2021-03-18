@@ -13,7 +13,7 @@ type BenchmarkResult struct {
 	GenName   string
 	CacheName string
 	CacheSize int
-	Samples   int
+	NumKey    int
 
 	Hits     int
 	Misses   int
@@ -23,7 +23,7 @@ type BenchmarkResult struct {
 
 func printResults(results []*BenchmarkResult) {
 	res := results[0]
-	fmt.Printf("%s cache=%d keys=%d\n\n", res.GenName, res.CacheSize, res.Samples)
+	fmt.Printf("%s cache=%d keys=%d\n\n", res.GenName, res.CacheSize, res.NumKey)
 
 	var data [][]string
 

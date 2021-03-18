@@ -12,7 +12,7 @@ type Benchmark struct {
 
 func main() {
 	cacheSize := []int{1e3, 10e3, 100e3, 1e6}
-	multiplier := []int{2, 10, 100}
+	multiplier := []int{10, 100, 1000}
 	newCache := []NewCacheFunc{
 		NewTinyLFU,
 		NewClockPro,
@@ -35,7 +35,7 @@ func main() {
 	for _, newGen := range newGen {
 		for _, cacheSize := range cacheSize {
 			for _, multiplier := range multiplier {
-				samples := cacheSize * multiplier
+				numKey := cacheSize * multiplier
 
 				if len(results) > 0 {
 					printResults(results)
@@ -43,7 +43,7 @@ func main() {
 				}
 
 				for _, newCache := range newCache {
-					result := run(newGen, cacheSize, samples, newCache)
+					result := run(newGen, cacheSize, numKey, newCache)
 					results = append(results, result)
 				}
 			}
@@ -51,8 +51,8 @@ func main() {
 	}
 }
 
-func run(newGen NewGeneratorFunc, cacheSize, samples int, newCache NewCacheFunc) *BenchmarkResult {
-	gen := newGen(samples)
+func run(newGen NewGeneratorFunc, cacheSize, numKey int, newCache NewCacheFunc) *BenchmarkResult {
+	gen := newGen(numKey)
 	b := &Benchmark{
 		Generator: gen,
 		N:         1e6,
@@ -72,7 +72,7 @@ func run(newGen NewGeneratorFunc, cacheSize, samples int, newCache NewCacheFunc)
 		GenName:   gen.Name(),
 		CacheName: cache.Name(),
 		CacheSize: cacheSize,
-		Samples:   samples,
+		NumKey:    numKey,
 
 		Hits:     hits,
 		Misses:   misses,
