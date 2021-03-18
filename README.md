@@ -7,8 +7,9 @@
 # Cache comparison benchmark for Go
 
 This benchmark compares cache algorithms using scrambled zipfian distribution (a few occur very
-often while many others occur rarely). Other distributions are supported too, but they produce the
-same results
+often while many others occur rarely). Other distributions are supported too, but they produce
+similar results. You may also want to check
+[cachetest](https://github.com/dgryski/trifles/tree/master/cachetest).
 
 The following libraries are supported:
 
