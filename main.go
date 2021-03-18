@@ -19,7 +19,10 @@ func main() {
 		NewARC,
 		NewRistretto,
 		NewTwoQueue,
-		NewLRU,
+		NewGroupCacheLRU,
+		NewHashicorpLRU,
+		NewS4LRU,
+		NewSLRU,
 	}
 	newGen := []NewGeneratorFunc{
 		NewScrambledZipfian,
