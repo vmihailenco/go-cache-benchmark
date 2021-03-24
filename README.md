@@ -25,8 +25,11 @@ And the results are:
 <details>
   <summary>TLDR</summary>
 
-- TinyLFU works best for small number of keys (~ 100k).
+- TinyLFU works best for small number of keys (~ 100k). TinyLFU memory overhead can be tweaked with
+  the 2nd argument.
 - Clock-pro has significantly smaller memory usage with large number of keys (~ 1m).
+- Segmented LRU has even smaller memory usage, but has inconsistent hit rate.
+- Ristretto can still be a good choice if you need additional features it provides.
 </details>
 
 ```
