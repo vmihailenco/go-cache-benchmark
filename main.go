@@ -18,6 +18,7 @@ func main() {
 		NewClockPro,
 		NewARC,
 		NewRistretto,
+		NewDirectCache,
 		NewTwoQueue,
 		NewGroupCacheLRU,
 		NewHashicorpLRU,
