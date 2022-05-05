@@ -14,6 +14,7 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/pingcap/go-ycsb v0.0.0-20210129115622-04d8656123e4
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/qianbin/directcache v0.9.1
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/stretchr/testify v1.7.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
