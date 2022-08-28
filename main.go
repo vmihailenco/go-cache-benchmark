@@ -24,6 +24,7 @@ func main() {
 		NewHashicorpLRU,
 		NewS4LRU,
 		NewSLRU,
+		NewWTFCache,
 	}
 	newGen := []NewGeneratorFunc{
 		NewScrambledZipfian,
