@@ -39,14 +39,14 @@ func main() {
 			for _, multiplier := range multiplier {
 				numKey := cacheSize * multiplier
 
-				if len(results) > 0 {
-					printResults(results)
-					results = results[:0]
-				}
-
 				for _, newCache := range newCache {
 					result := run(newGen, cacheSize, numKey, newCache)
 					results = append(results, result)
+				}
+
+				if len(results) > 0 {
+					printResults(results)
+					results = results[:0]
 				}
 			}
 		}
